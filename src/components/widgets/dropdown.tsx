@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, ReactNode } from 'react';
-import Button from './button';
+import Button, { ButtonProps } from './button';
 import { Alignment, Position } from './customization';
 
 type DropdownProps = {
@@ -36,8 +36,8 @@ export function Dropdown({ children, position, align }: DropdownProps): JSX.Elem
         </div>
     )
 }
-
-export const DropdownToggle = Button;
+type DropdownToggleProps = Omit<ButtonProps, 'onClick'>;
+export const DropdownToggle = (props: DropdownToggleProps) => <Button {...props} />;
 
 type DropdownMenuProps = {
     children: ReactNode,

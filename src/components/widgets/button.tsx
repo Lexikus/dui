@@ -3,7 +3,7 @@
 import { JSX, ReactNode } from 'react';
 import { Effect, Expand, Shape, Size, State, Theme, Variant } from './customization';
 
-type ButtonProps = {
+export type ButtonProps = {
     children: ReactNode,
     type?: 'button' | 'submit';
     state?: State;
