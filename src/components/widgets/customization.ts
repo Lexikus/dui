@@ -5,5 +5,5 @@ export type Size = 'lg' | 'md' | 'sm' | 'xs';
 export type Shape = 'circle' | 'square';
 export type Expand = 'wide' | 'block';
 export type Effect = 'glass';
-export type Orientation = 'top' | 'left' | 'right' | 'bottom';
+export type Position = 'top' | 'left' | 'right' | 'bottom';
 export type Alignment = 'start' | 'end';
