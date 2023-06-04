@@ -1,6 +1,9 @@
 export type State = 'active' | 'disabled'
 export type Theme = 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost';
+export type AlertTheme = 'info' | 'success' | 'warning' | 'error';
+export type ProgressTheme = 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
 export type Variant = 'outline' | 'link';
+export type VariantBadge = 'outline';
 export type Size = 'lg' | 'md' | 'sm' | 'xs';
 export type Shape = 'circle' | 'square';
 export type Expand = 'wide' | 'block';

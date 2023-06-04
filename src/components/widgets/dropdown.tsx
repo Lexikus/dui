@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, ReactNode } from 'react';
-import Button, { ButtonProps } from './button';
+import { Button, type ButtonProps } from './button';
 import { Alignment, Position } from './customization';
 
 type DropdownProps = {

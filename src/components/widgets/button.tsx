@@ -17,7 +17,7 @@ export type ButtonProps = {
     loading?: boolean
     onClick?: () => void;
 }
-export default function Button({ children, type = 'button', loading, noAnimation, theme, state, variant, effect, expand, shape, size, onClick }: ButtonProps): JSX.Element {
+export function Button({ children, type = 'button', loading, noAnimation, theme, state, variant, effect, expand, shape, size, onClick }: ButtonProps): JSX.Element {
     const noAnimationModifier = noAnimation ? 'no-animation' : '';
 
     let themeModifier: string = '';
