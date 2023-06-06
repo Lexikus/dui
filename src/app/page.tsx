@@ -5,19 +5,26 @@ import { Alert, AlertAction } from '../components/widgets/alert';
 import { Badge } from '../components/widgets/badge';
 import { Button } from '../components/widgets/button';
 import { Card, CardAction, CardBody, CardFigure } from '../components/widgets/card';
+import { Checkbox } from '../components/widgets/checkbox';
 import { Collapse, CollapseBody, CollapseTitle } from '../components/widgets/collapse';
+import { Divider } from '../components/widgets/divider';
+import { closeDrawer, Drawer, openDrawer } from '../components/widgets/drawer';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from '../components/widgets/dropdown';
+import { Indicator, IndicatorBody, IndicatorItem } from '../components/widgets/indicator';
+import { Input } from '../components/widgets/input';
 import { Kbd } from '../components/widgets/kbd';
 import { closeModal, Modal, ModalAction, ModalBody, openModal } from '../components/widgets/modal';
 import { Progress } from '../components/widgets/progress';
+import { Radio } from '../components/widgets/radio';
+import { Range } from '../components/widgets/range';
+import { Textarea } from '../components/widgets/textarea';
+import { Toggle } from '../components/widgets/toggle';
 
 export default function Home(): JSX.Element {
   return (
     <>
-      <div>h1</div>
-      <button className="btn btn-primary glass">foo</button>
       <Button size="lg" theme='success'>fsdf</Button>
-      <Dropdown position='bottom' align='end'>
+      <Dropdown position='bottom'>
         <DropdownToggle theme='primary'>foo</DropdownToggle>
         <DropdownMenu>
           <DropdownItem>
@@ -111,6 +118,34 @@ export default function Home(): JSX.Element {
 
       <Kbd>A</Kbd>
       <Progress theme='error' value={20} max={100}></Progress>
+      <Checkbox theme='error' />
+      <Radio theme='error' />
+      <Range min={0} max={10} theme='error' />
+      <Input labelTopLeft='tleft' labelTopRight='tright' labelBottomLeft='bleft' labelBottomRight='bright' theme='accent' />
+      <Textarea labelTopLeft='tleft' labelTopRight='tright' labelBottomLeft='bleft' labelBottomRight='bright' theme='accent' />
+      <Toggle theme='error' />
+      <Divider>fdfd</Divider>
+
+      <Button onClick={() => openDrawer("drawer")}>foo</Button>
+      <Drawer right id="drawer">
+        fsdfsaf
+        <Button onClick={() => closeDrawer("drawer")}>foo</Button>
+      </Drawer>
+
+      <Indicator>
+        <IndicatorItem>
+          <Badge>12</Badge>
+        </IndicatorItem>
+        <IndicatorBody>
+          <div className="grid w-32 h-32 bg-base-300 place-items-center">content</div>
+        </IndicatorBody>
+      </Indicator>
+
+      <div className="join">
+        <div className="join-item"><div className='btn'>fdf</div></div>
+        <div className="join-item"><div className='btn'>aas</div></div>
+        <div className="join-item"><div className='btn'>fd</div></div>
+      </div>
     </>
   )
 }

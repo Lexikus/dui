@@ -1,5 +1,4 @@
 'use client';
-
 import { JSX, ReactNode } from 'react';
 
 export function openModal(id: string): void {

@@ -1,11 +1,10 @@
-'use client';
-
 import { JSX, ReactNode } from 'react';
-import { AlertTheme } from './customization';
+
+type Theme = 'info' | 'success' | 'warning' | 'error';
 
 type AlertProps = {
     children: ReactNode;
-    theme?: AlertTheme;
+    theme?: Theme;
 }
 export function Alert({ children, theme }: AlertProps): JSX.Element {
     let themeModifier: string = '';

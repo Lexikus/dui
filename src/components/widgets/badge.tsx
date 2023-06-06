@@ -1,12 +1,14 @@
-'use client';
-
 import { JSX, ReactNode } from 'react';
-import { Size, Theme, VariantBadge } from './customization';
+
+type Theme = 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost';
+type Size = 'lg' | 'md' | 'sm' | 'xs';
+type Variant = 'outline';
+
 type BadgeProps = {
     children: ReactNode;
     theme?: Theme;
     size?: Size;
-    variant?: VariantBadge;
+    variant?: Variant;
 }
 export function Badge({ children, theme, size, variant }: BadgeProps): JSX.Element {
     let themeModifier: string = '';

@@ -1,8 +1,9 @@
 'use client';
-
 import { JSX, ReactNode } from 'react';
 import { Button, type ButtonProps } from './button';
-import { Alignment, Position } from './customization';
+
+type Position = 'top' | 'left' | 'right' | 'bottom';
+type Alignment = 'start' | 'end';
 
 type DropdownProps = {
     children: ReactNode;
@@ -44,7 +45,7 @@ type DropdownMenuProps = {
 }
 export function DropdownMenu({ children }: DropdownMenuProps): JSX.Element {
     return (
-        <ul tabIndex={0} className="p-2 shadow dropdown-content menu bg-base-100 rounded-box w-52">
+        <ul tabIndex={0} className="p-2 shadow dropdown-content menu bg-base-100 rounded-box min-w-[13rem]">
             {children}
         </ul>
     )

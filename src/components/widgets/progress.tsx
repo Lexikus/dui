@@ -1,11 +1,11 @@
-"use client";
-import { JSX, ReactNode } from 'react';
-import { ProgressTheme } from './customization';
+import { JSX } from 'react';
+
+type Theme = 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
 
 type ProgressProps = {
     value: number;
     max: number;
-    theme?: ProgressTheme;
+    theme?: Theme;
 }
 export function Progress({ value, max, theme }: ProgressProps): JSX.Element {
     let themeModifier: string = '';

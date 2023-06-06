@@ -1,7 +1,14 @@
 'use client';
 
 import { JSX, ReactNode } from 'react';
-import { Effect, Expand, Shape, Size, State, Theme, Variant } from './customization';
+
+type State = 'active' | 'disabled'
+type Theme = 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error' | 'ghost';
+type Variant = 'outline' | 'link';
+type Size = 'lg' | 'md' | 'sm' | 'xs';
+type Shape = 'circle' | 'square';
+type Expand = 'wide' | 'block';
+type Effect = 'glass';
 
 export type ButtonProps = {
     children: ReactNode,

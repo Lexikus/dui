@@ -1,5 +1,3 @@
-'use client';
-
 import { JSX, ReactNode } from 'react';
 
 type CardProps = {

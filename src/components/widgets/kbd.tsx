@@ -1,6 +1,6 @@
-'use client';
 import { JSX, ReactNode } from 'react';
-import { Size } from './customization';
+
+type Size = 'lg' | 'md' | 'sm' | 'xs';
 
 type KbdProps = {
     children: ReactNode;
